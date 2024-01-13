@@ -7,10 +7,18 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [selectedPage, setSelectedPage] = useState('paysage'); 
 
+  const users = [
+    { username: 'Lokesh', password: 'roof', role: 'admin' },
+    { username: 'Mukilan', password: 'roof', role: 'admin' },
+    { username: 'Natesan', password: 'roof', role: 'admin' },
+  ];
+
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (username === 'Lokesh' && password === 'roof') {
+    const matchedUser = users.find(user => user.username === username && user.password === password);
+
+    if (matchedUser) {
       navigate(`/${selectedPage}`);
     } else {
       alert('Incorrect username or password');

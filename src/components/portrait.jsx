@@ -61,8 +61,8 @@ const PORTRAIT = () => {
                   className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   value={Epaisseurmodule}
                   onChange={(e) => setEpaisseurmodule(e.target.value)}
-                  min="0"
-                  max="100"
+                  min="30"
+                  max="60"
                   step="1"
                 />
               </div>
@@ -96,8 +96,8 @@ const PORTRAIT = () => {
                   value={percentage}
                   onChange={(e) => setPercentage(e.target.value)}
                   min="0"
-                  max="100"
-                  step="1"
+                  max="10"
+                  step="0.5"
                 />
               </div>
             </td>
