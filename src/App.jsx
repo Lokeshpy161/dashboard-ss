@@ -4,6 +4,7 @@ import Paysage from './components/table';
 import Portrait from './components/portrait';
 import Navbar from './components/navbar'
 import LoginPage from './components/login';
+import SAMPLE from './components/sample';
 
 function App() {
   const isAuthenticated = true; 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/paysage" element={<Paysage />} />
         <Route path="/portrait" element={<Portrait />} />
+        <Route path='/sample' element={ <SAMPLE /> } />
       </Routes>
     </Router>
   );

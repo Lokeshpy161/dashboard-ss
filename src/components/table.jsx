@@ -4,13 +4,49 @@ const PAYSAGE = () => {
   const [Epaisseurmodule, setEpaisseurmodule] = useState(0);
   const [percentage, setPercentage] = useState(0);
 
+  const [qteValues, setQteValues] = useState(Array(10).fill(0)); // Assuming 10 rows, adjust as needed
+
+  const handleQteChange = (index, value) => {
+    const newQteValues = [...qteValues];
+    newQteValues[index] = parseInt(value) || 0;
+    setQteValues(newQteValues);
+  };
+
+  const ProductTable = [
+    { name: 'Rail RS-R', condit: 1 },
+    { name: "Rail Opti'Roof", condit: 1 },
+    { name: "Rail Opti'Roof Sunshine", condit: 100 },
+    { name: 'Kit Bride Centrale ST02+Terragrif 30-50 universelle Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale ST02 30-34 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale ST02 35-39 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale ST02 40-44 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale ST02 45-49 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale ST02 50 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale 30-31 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale 32-36 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale 37-41 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale 42-46 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Centrale 47-50 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 30-31 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 32-33 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 34-35 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 36-37 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 38-39 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 40-41 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 42-44 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 45-49 Jorisolar', condit: 1 },
+    { name: 'Kit Bride Latérale 50 Jorisolar', condit: 1 },
+    { name: 'Clip de mise à la terre Rayvolt', condit: 1 },
+  ];
+  
+
 
 
   return (
     <div className="container mx-auto mt-8">
 
       <br />
-      <h1 className='text-4xl font-extrabold text-center text-black'>RS-R - PORTRAIT</h1>
+      <h1 className='text-4xl font-extrabold text-center text-black'>OPTI'ROOF - PAYSAGE</h1>
       <br />
       <br />
 
@@ -139,507 +175,36 @@ const PAYSAGE = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Rail RS-R</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Rail Opti'Roof</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Rail Opti'Roof Sunshine</td>
-            <td className="py-2 px-4 border-r border-blue-300">100</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale ST02+Terragrif 30-50 universelle Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale ST02 30-34 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale ST02 35-39 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale ST02 40-44 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale ST02 45-49 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale ST02 50 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale 30-31 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale 32-36 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale 37-41 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale 42-46 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Centrale 47-50 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 30-31 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 32-33 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 34-35 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 36-37 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 38-39 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 40-41 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 42-44 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 45-49 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Kit Bride Latérale 50 Jorisolar</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
-
-          {/* --------------------------------------------- */}
-
-          <tr className="hover:bg-blue-100">
-            <td className="py-2 px-4 border-r border-blue-300">Clip de mise à la terre Rayvolt</td>
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-
-            <td className="py-2 px-4 border-r border-blue-300">1</td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-            <td className="py-2 px-4 border-r border-blue-300">
-              <input
-                type="input"
-                className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              />
-            </td>
-          </tr>
+          {ProductTable.map((product, index) => (
+            <tr className="hover:bg-blue-100" key={index}>
+              <td className="py-2 px-4 border-r border-blue-300">{product.name}</td>
+              <td className="py-2 px-4 border-r border-blue-300">{product.condit}</td>
+              <td id={`fCell_${index}`} className="py-2 px-4 border-r border-blue-300">
+                {qteValues[index]}
+              </td>
+              <td className="py-2 px-4 border-r border-blue-300">
+                <input
+                  type="input"
+                  className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  onChange={(e) => handleQteChange(index, e.target.value)}
+                />
+              </td>
+              <td className="py-2 px-4 border-r border-blue-300">
+                <input
+                  type="input"
+                  className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                />
+              </td>
+              <td className="py-2 px-4 border-r border-blue-300">
+                <input
+                  type="input"
+                  className="block appearance-none w-full bg-white border border-blue-300 hover:border-gray-500 px-4 py-2 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                />
+              </td>
+            </tr>
+          ))}
         </tbody>
+        
       </table>
       <br/><br/><br/><br/><br/><br/><br/><br/>
     </div>

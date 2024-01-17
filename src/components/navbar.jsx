@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="flex justify-between items-center p-4 bg-blue-900 shadow-custom">
       <div className="text-2xl font-bold text-white pl-4">JORISIDE ENERGY</div>
       <div className="flex items-center space-x-3 pr-4">
-        {(location.pathname.includes('/paysage') || location.pathname.includes('/portrait')) && (
+        {(location.pathname.includes('/paysage') || location.pathname.includes('/portrait') || location.pathname.includes('/sample')) && (
           <>
             <img
               src={person}
